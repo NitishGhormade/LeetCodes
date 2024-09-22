@@ -1,0 +1,4 @@
+New Algorithm's Question on LeetCode :- 
+1. String Machine
+2. KVM
+3. Trie
