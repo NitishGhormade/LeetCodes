@@ -1,4 +1,29 @@
 class MyCalendar {
+    TreeMap<Integer, Integer> tmp;
+
+    public MyCalendar() {
+        tmp = new TreeMap<>();
+    }
+
+    public boolean book(int start, int end) {
+        Integer prevVal = tmp.floorKey(start);
+        Integer nextVal = tmp.ceilingKey(start);
+
+        if(prevVal != null && start < tmp.get(prevVal)){
+            return false;
+        }
+        if(nextVal != null && nextVal < end){
+            return false;
+        }
+        tmp.put(start, end);
+        return true;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+class MyCalendar {
     List<int[]> times;
 
     public MyCalendar() {
