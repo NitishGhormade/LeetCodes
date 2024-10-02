@@ -1,3 +1,5 @@
+// In this question the MINIMUM SUM = NUMS.LENGTH so if THRESHOLD is LESS than the sum of the array then the answer will be -1, but there will no such case happen due to the Constraints.
+
 class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
         int max = nums[0];
