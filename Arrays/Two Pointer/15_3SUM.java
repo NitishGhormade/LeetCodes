@@ -3,8 +3,10 @@ class Solution {
 
     static void threeSum(List<List<Integer>> ls, ArrayList<Integer> current, int[] nums, int startIdx, int sum){
         // base case
-        if(current.size() == 3 && sum == 0){
-            ls.add(new ArrayList<>(current));
+        if(current.size() == 3){
+            if(sum == 0){
+                ls.add(new ArrayList<>(current));
+            }
             return;
         }
 
