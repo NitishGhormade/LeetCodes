@@ -11,14 +11,14 @@ class Solution {
         }
 
         for(int i = startIdx;i < nums.length;i++){
-            current.add(nums[i]);
-
             if(i > startIdx && nums[i - 1] == nums[i]){}
             else{
-                threeSum(ls, current, nums, i + 1, sum + nums[i]);
-            }
+                current.add(nums[i]);
 
-            current.remove(current.size() - 1);
+                threeSum(ls, current, nums, i + 1, sum + nums[i]);
+            
+                current.remove(current.size() - 1);
+            }
         }
     }
 
